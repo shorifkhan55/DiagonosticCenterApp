@@ -1,0 +1,6 @@
+E:\Tutorials\my-pictic\Project-1\DiagnosticCenterBillingApp\DiagnosticCenterBillingApp\bin\DiagnosticCenterBillingApp.dll.config
+E:\Tutorials\my-pictic\Project-1\DiagnosticCenterBillingApp\DiagnosticCenterBillingApp\bin\DiagnosticCenterBillingApp.dll
+E:\Tutorials\my-pictic\Project-1\DiagnosticCenterBillingApp\DiagnosticCenterBillingApp\bin\DiagnosticCenterBillingApp.pdb
+E:\Tutorials\my-pictic\Project-1\DiagnosticCenterBillingApp\DiagnosticCenterBillingApp\obj\Debug\DiagnosticCenterBillingApp.csprojResolveAssemblyReference.cache
+E:\Tutorials\my-pictic\Project-1\DiagnosticCenterBillingApp\DiagnosticCenterBillingApp\obj\Debug\DiagnosticCenterBillingApp.dll
+E:\Tutorials\my-pictic\Project-1\DiagnosticCenterBillingApp\DiagnosticCenterBillingApp\obj\Debug\DiagnosticCenterBillingApp.pdb
