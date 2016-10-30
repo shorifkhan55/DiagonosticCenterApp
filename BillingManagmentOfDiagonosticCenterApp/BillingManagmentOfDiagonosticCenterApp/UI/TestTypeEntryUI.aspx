@@ -20,7 +20,6 @@
   </head>
 <body>
     <form id="form1" runat="server">
-        <div class="container-fluid">
             <!--Nav Section-->
             <nav class="navbar navbar-default">
               <div class="container-fluid">
@@ -37,8 +36,8 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Type Entry<span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Test Entry</a></li>
+                    <li class="active"><a href="TestTypeEntryUI.aspx">Type Entry<span class="sr-only">(current)</span></a></li>
+                    <li><a href="TestEntryUI.aspx">Test Entry</a></li>
                     <li><a href="#">Patient Request</a></li>
                     <li><a href="#">Payment Info</a></li>
                     <li><a href="#">Test Wise Report</a></li>
@@ -49,7 +48,7 @@
               </div>
             </nav>
         <!--End Of Nav Section-->
-        </div>
+
         <div class="container responsive-container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-md-offset-3">
@@ -112,7 +111,7 @@
                 
                 <!--End of Show All Test Type Here-->
             </div>
-        </div>  
+        </div>
     </form>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
