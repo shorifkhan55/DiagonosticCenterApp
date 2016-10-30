@@ -38,8 +38,8 @@
                   <ul class="nav navbar-nav">
                     <li class="active"><a href="TestTypeEntryUI.aspx">Type Entry<span class="sr-only">(current)</span></a></li>
                     <li><a href="TestEntryUI.aspx">Test Entry</a></li>
-                    <li><a href="#">Patient Request</a></li>
-                    <li><a href="#">Payment Info</a></li>
+                    <li><a href="PatientInfoEntryUI.aspx">Patient Request</a></li>
+                    <li><a href="AmountInfoUI.aspx">Payment Info</a></li>
                     <li><a href="#">Test Wise Report</a></li>
                     <li><a href="#">Type Wise Report</a></li>
                     <li><a href="#">Due Bill Info</a></li>
