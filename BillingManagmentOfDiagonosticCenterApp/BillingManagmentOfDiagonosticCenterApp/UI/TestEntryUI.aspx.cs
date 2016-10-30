@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using BillingManagmentOfDiagonosticCenterApp.BLL;
 using BillingManagmentOfDiagonosticCenterApp.Model;
+using BillingManagmentOfDiagonosticCenterApp.Model.ViewModels;
 
 namespace BillingManagmentOfDiagonosticCenterApp.UI
 {
@@ -19,7 +20,10 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI
             if (!IsPostBack)
             {
                 LoadTestTypeDropDownList();
+                FillAllTestWithType();
             }
+
+            
         }
 
         public void LoadTestTypeDropDownList()
@@ -56,6 +60,7 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI
                             successfullAlartLabel.Text = "Successfully Saved!!";
                             dangerDiv.Visible = false;
                             successfullDiv.Visible = true;
+                            FillAllTestWithType();
                         }
                         else
                         {
@@ -90,6 +95,15 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI
             
 
 
+        }
+
+        private void FillAllTestWithType()
+        {
+            TestManager testManager = new TestManager();
+            List<ViewAllTestWithType> testListWithType = testManager.GetAllTypesListWithType();
+
+            testShowGridView.DataSource = testListWithType;
+            testShowGridView.DataBind();
         }
     }
 }

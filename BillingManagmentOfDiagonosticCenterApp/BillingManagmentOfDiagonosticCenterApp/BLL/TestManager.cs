@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using BillingManagmentOfDiagonosticCenterApp.DAL;
 using BillingManagmentOfDiagonosticCenterApp.Model;
+using BillingManagmentOfDiagonosticCenterApp.Model.ViewModels;
 
 namespace BillingManagmentOfDiagonosticCenterApp.BLL
 {
@@ -18,6 +19,11 @@ namespace BillingManagmentOfDiagonosticCenterApp.BLL
         public bool IsTestExist(Test test)
         {
             return _testGateway.IsTestExist(test);
+        }
+
+        public List<ViewAllTestWithType> GetAllTypesListWithType()
+        {
+            return _testGateway.GetAllTypesListWithType();
         }
     }
 }

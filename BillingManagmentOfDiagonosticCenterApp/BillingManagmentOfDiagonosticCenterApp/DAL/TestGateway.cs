@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Configuration;
 using BillingManagmentOfDiagonosticCenterApp.Model;
+using BillingManagmentOfDiagonosticCenterApp.Model.ViewModels;
 
 namespace BillingManagmentOfDiagonosticCenterApp.DAL
 {
@@ -47,6 +48,38 @@ namespace BillingManagmentOfDiagonosticCenterApp.DAL
             {
                 return false;
             }
+        }
+
+        public List<ViewAllTestWithType> GetAllTypesListWithType()
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            string query = "SELECT *FROM ViewAllTestWithType";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            connection.Open();
+
+            SqlDataReader reader = command.ExecuteReader();
+            List<ViewAllTestWithType> testListWithTypeName = new List<ViewAllTestWithType>();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    ViewAllTestWithType testWithTypeName = new ViewAllTestWithType();
+                    testWithTypeName.Id = int.Parse(reader["Id"].ToString());
+                    testWithTypeName.Name = reader["Name"].ToString();
+                    testWithTypeName.Fee = double.Parse(reader["Fee"].ToString());
+                    testWithTypeName.TypeId = int.Parse(reader["TypeId"].ToString());
+                    testWithTypeName.TypeName = reader["TypeName"].ToString();
+
+                    testListWithTypeName.Add(testWithTypeName);
+                }
+                reader.Close();
+            }
+            connection.Close();
+
+            return testListWithTypeName;
         }
     }
 }

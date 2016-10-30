@@ -84,6 +84,7 @@
     <Compile Include="Model\Patient.cs" />
     <Compile Include="Model\Test.cs" />
     <Compile Include="Model\TestType.cs" />
+    <Compile Include="Model\ViewModels\ViewAllTestWithType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\AmountInfoUI.aspx.cs">
       <DependentUpon>AmountInfoUI.aspx</DependentUpon>
@@ -152,9 +153,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -67,7 +67,7 @@
                     <!--Start of Test Setup Section-->
                     <div class="panel panel-primary">
                       <div class="panel-heading">
-                          <h2>Test Stup</h2>
+                          <h2>Test Setup</h2>
                       </div>
                       <div class="panel-body">
                         <div class="col-xs-12">
@@ -116,22 +116,22 @@
                         <Columns>
                             <asp:TemplateField  HeaderText="SL NO">
                                 <ItemTemplate>
-                                    <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                    <asp:Label runat="server"><%#Container.DataItemIndex+1 %></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Test Name">
                                 <ItemTemplate>
-                                    <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                    <asp:Label runat="server"><%#Eval("Name") %></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Test Fee">
                                 <ItemTemplate>
-                                    <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                    <asp:Label runat="server"><%#Eval("Fee") %></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Test Type">
                                 <ItemTemplate>
-                                    <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                    <asp:Label runat="server"><%#Eval("TypeName") %></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
