@@ -81,7 +81,7 @@
                             <input placeholder="Type Name" type="text" id="testTypeNameTextBox" value=" " runat="server" class="form-control"/>
                         </div>
                         <div class="col-lg-2 pull-right space">
-                            <asp:Button runat="server" ID="testTypeSaveButton" CssClass="btn btn-primary" Text="Save" />
+                            <asp:Button runat="server" ID="testTypeSaveButton" CssClass="btn btn-primary" Text="Save" OnClick="testTypeSaveButton_Click" />
                         </div>
                       </div>
                     </div>
@@ -98,12 +98,12 @@
                         <Columns>
                             <asp:TemplateField HeaderText="Serial No">
                                 <ItemTemplate>
-                                    <asp:Label runat="server"></asp:Label>
+                                    <asp:Label runat="server"><%#Eval("Id") %></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Type Name">
                                 <ItemTemplate>
-                                    <asp:Label runat="server"></asp:Label>
+                                    <asp:Label runat="server"><%#Eval("Name") %></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>

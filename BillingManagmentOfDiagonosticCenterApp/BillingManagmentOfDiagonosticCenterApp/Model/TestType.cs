@@ -5,21 +5,16 @@ using System.Web;
 
 namespace BillingManagmentOfDiagonosticCenterApp.Model
 {
-    public class Test
+    public class TestType
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public double Fee { get; set; }
-        public int TypeId { get; set; }
 
-        public Test(string name,double fee,int typeId)
+        public TestType(string name)
         {
             this.Name = name;
-            this.Fee = fee;
-            this.TypeId = typeId;
         }
-
-        public Test(int id,string name, double fee, int typeId):this(name,fee,typeId)
+        public TestType(int id,string name):this(name)
         {
             this.Id = id;
         }
