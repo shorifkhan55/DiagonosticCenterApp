@@ -14,6 +14,8 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            testTypeDangerDiv.Visible = false;
+            testTypeSuccessfullDiv.Visible = false;
             FillAllType();
         }
         protected void testTypeSaveButton_Click(object sender, EventArgs e)
@@ -30,21 +32,30 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI
                     if (rowAffected > 0)
                     {
                         testTypeSuccessfullAlartLabel.Text = "Test testType succesfully saved.";
+                        testTypeDangerDiv.Visible = false;
+                        testTypeSuccessfullDiv.Visible = true;
+                        FillAllType();
                     }
                     else
                     {
                         testTypeDangerAlartLabel.Text = "Test Type Name not saved!";
+                        testTypeDangerDiv.Visible = true;
+                        testTypeSuccessfullDiv.Visible = false;
                     }
                 }
                 else
                 {
                     testTypeDangerAlartLabel.Text = "Test Type already exist";
+                    testTypeDangerDiv.Visible = true;
+                    testTypeSuccessfullDiv.Visible = false;
                 }
 
             }
             else
             {
-                testTypeDangerAlartLabel.Text = "Please, give type name";
+                testTypeDangerAlartLabel.Text = "Please, give type name.";
+                testTypeDangerDiv.Visible = true;
+                testTypeSuccessfullDiv.Visible = false;
             }
         }
 
