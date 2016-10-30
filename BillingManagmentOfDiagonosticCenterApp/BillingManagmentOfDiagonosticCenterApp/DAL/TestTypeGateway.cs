@@ -41,10 +41,9 @@ namespace BillingManagmentOfDiagonosticCenterApp.DAL
             List<TestType> typeList=new List<TestType>();
             if (reader.HasRows)
             {
-                int counter = 0;
                 while (reader.Read())
                 {
-                    int id = ++counter;
+                    int id = int.Parse(reader["Id"].ToString());
                     string name = reader["Name"].ToString();
 
                     TestType testType=new TestType(id,name);

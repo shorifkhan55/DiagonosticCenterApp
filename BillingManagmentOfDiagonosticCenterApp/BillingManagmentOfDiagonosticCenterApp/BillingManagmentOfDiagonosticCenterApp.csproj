@@ -77,7 +77,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\TestManager.cs" />
     <Compile Include="BLL\TestTypeManager.cs" />
+    <Compile Include="DAL\TestGateway.cs" />
     <Compile Include="DAL\TestTypeGateway.cs" />
     <Compile Include="Model\Patient.cs" />
     <Compile Include="Model\Test.cs" />
@@ -150,7 +152,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\ViewModels\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -99,7 +99,7 @@
                         </div>
 
                         <div class="col-lg-2 pull-right space">
-                            <asp:Button runat="server" ID="testsSaveButton" CssClass="btn btn-primary" Text="Save" />
+                            <asp:Button runat="server" ID="testsSaveButton" CssClass="btn btn-primary" Text="Save" OnClick="testsSaveButton_Click" />
                         </div>
                       </div>
                     </div>
