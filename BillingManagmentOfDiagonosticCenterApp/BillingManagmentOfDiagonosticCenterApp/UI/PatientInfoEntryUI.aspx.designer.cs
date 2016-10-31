@@ -58,22 +58,31 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI {
         protected global::System.Web.UI.WebControls.Label testTypeSuccessfullAlartLabel;
         
         /// <summary>
-        /// Text4 control.
+        /// nameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text4;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText nameTextBox;
         
         /// <summary>
-        /// Text2 control.
+        /// dateOfBirthTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl dateOfBirthTextBox;
+        
+        /// <summary>
+        /// mobileTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl mobileTextBox;
         
         /// <summary>
         /// testSelectDropDownList control.
@@ -85,13 +94,13 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI {
         protected global::System.Web.UI.WebControls.DropDownList testSelectDropDownList;
         
         /// <summary>
-        /// Text1 control.
+        /// feeTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText feeTextBox;
         
         /// <summary>
         /// addGridviewButton control.
@@ -112,21 +121,21 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI {
         protected global::System.Web.UI.WebControls.GridView testShowGridView;
         
         /// <summary>
-        /// Text3 control.
+        /// totalTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text3;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText totalTextBox;
         
         /// <summary>
-        /// Button1 control.
+        /// saveButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button saveButton;
     }
 }

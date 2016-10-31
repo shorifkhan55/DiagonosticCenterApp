@@ -31,7 +31,7 @@ namespace BillingManagmentOfDiagonosticCenterApp.DAL
         {
             SqlConnection connection = new SqlConnection(connectionString);
 
-            string query = "SELECT *FROM Types";
+            string query = "SELECT *FROM Types ORDER BY Name";
 
             SqlCommand command = new SqlCommand(query, connection);
 

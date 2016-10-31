@@ -5,6 +5,7 @@ using System.Web;
 
 namespace BillingManagmentOfDiagonosticCenterApp.Model
 {
+    [Serializable()]
     public class Test
     {
         public int Id { get; set; }
@@ -12,6 +13,8 @@ namespace BillingManagmentOfDiagonosticCenterApp.Model
         public double Fee { get; set; }
         public int TypeId { get; set; }
 
+        public Test()
+        { }
         public Test(string name,double fee,int typeId)
         {
             this.Name = name;

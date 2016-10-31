@@ -25,5 +25,23 @@ namespace BillingManagmentOfDiagonosticCenterApp.BLL
         {
             return _testGateway.GetAllTypesListWithType();
         }
+
+        public List<Test> GetAllTestsList()
+        {
+            return _testGateway.GetAllTestsList();
+        }
+
+        public double GetFeeByTestId(int id)
+        {
+            return _testGateway.GetFeeByTestId(id);
+
+        }
+
+        public Test GetTestById(int id)
+        {
+            return _testGateway.GetTestById(id);
+        }
+
+
     }
 }
