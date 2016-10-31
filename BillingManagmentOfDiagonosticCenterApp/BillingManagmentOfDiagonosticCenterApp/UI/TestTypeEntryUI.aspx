@@ -97,7 +97,7 @@
                         <Columns>
                             <asp:TemplateField HeaderText="Serial No">
                                 <ItemTemplate>
-                                    <asp:Label runat="server"><%#Eval("Id") %></asp:Label>
+                                    <asp:Label runat="server"><%#Container.DataItemIndex+1 %></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Type Name">
