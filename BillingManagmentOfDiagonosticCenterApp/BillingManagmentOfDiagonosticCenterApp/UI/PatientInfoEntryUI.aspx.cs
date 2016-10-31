@@ -93,10 +93,10 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI
                     int patientRowAffected = patientManager.Save(patient);
 
                     int patientId = patientManager.GetLastPatientId();
-
+                    double totalAmount = Convert.ToDouble(ViewState["TotalAmount"]);
                     string billNo = currentDateTime.ToString("yyyyMMddHHmmss") + patientId.ToString();
 
-                    Bill bill=new Bill(billNo,currentDateTime,0);
+                    Bill bill=new Bill(billNo,currentDateTime,totalAmount,"unpaid");
                     int billRowAffected = billManager.Save(bill);
 
                     foreach (Test test in testList)

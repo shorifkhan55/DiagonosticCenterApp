@@ -15,5 +15,21 @@ namespace BillingManagmentOfDiagonosticCenterApp.BLL
         {
             return _billGateway.Save(bill);
         }
+
+        public Bill GetBillByBillNo(string billNo)
+        {
+            return _billGateway.GetBillByBillNo(billNo);
+        }
+
+        public Bill GetBillByMobileNo(string mobileNo)
+        {
+            return _billGateway.GetBillByMobileNo(mobileNo);
+        }
+
+        public int UpdateBillStatus(string billNo)
+        {
+            return _billGateway.UpdateBillStatus(billNo);
+
+        }
     }
 }

@@ -104,7 +104,7 @@
                                     <label>Select Test</label>
                                 </div>
                                 <div class="col-lg-7">
-                                    <asp:DropDownList runat="server" ID="testSelectDropDownList" CssClass="btn btn-default " AutoPostBack="True" OnSelectedIndexChanged="testSelectDropDownList_SelectedIndexChanged"/>
+                                    <asp:DropDownList runat="server" ID="testSelectDropDownList" CssClass="btn btn-default " Width="258px" AutoPostBack="True" OnSelectedIndexChanged="testSelectDropDownList_SelectedIndexChanged"/>
                                 </div>
                             </div>
                             <div class=" col-lg-6 col-lg-offset-7 space">

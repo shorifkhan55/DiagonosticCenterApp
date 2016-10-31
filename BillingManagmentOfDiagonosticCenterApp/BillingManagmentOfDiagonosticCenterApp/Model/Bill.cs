@@ -9,13 +9,18 @@ namespace BillingManagmentOfDiagonosticCenterApp.Model
     {
         public string BillNo { get; set; }
         public DateTime Date { get; set; }
-        public byte Status { get; set; }
+        public double Amount { get; set; }
+        public string Status { get; set; }
 
-        public Bill(string billNo, DateTime date, byte status)
+        public Bill(string billNo, DateTime date,double amount, string status)
         {
             this.BillNo = billNo;
             this.Date = date;
+            this.Amount = amount;
             this.Status = status;
         }
+
+        public Bill()
+        { }
     }
 }
