@@ -31,5 +31,10 @@ namespace BillingManagmentOfDiagonosticCenterApp.BLL
             return _billGateway.UpdateBillStatus(billNo);
 
         }
+
+        public bool IsBillPaid(string billNo)
+        {
+            return _billGateway.IsBillPaid(billNo);
+        }
     }
 }

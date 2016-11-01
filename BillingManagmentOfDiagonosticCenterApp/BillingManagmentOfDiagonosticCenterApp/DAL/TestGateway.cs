@@ -161,5 +161,36 @@ namespace BillingManagmentOfDiagonosticCenterApp.DAL
             connection.Close();
             return test;
         }
+
+        public List<ViewTestWithTotalTest> GetTestWiseReportByDate(DateTime lowerDate, DateTime upperDateTime)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            string query = "SELECT T.Name, COUNT(R.BillNo) TotalTest, T.Fee*COUNT(R.BillNo) AS TotalAmount FROM(SELECT O.TestId, O.BillNo FROM Orders O INNER JOIN Bills B ON O.BillNo = B.BillNo WHERE B.Date >='"+lowerDate+"' AND B.Date<='"+upperDateTime+"') R RIGHT JOIN Tests T ON R.TestId = T.Id GROUP BY T.Name, T.Fee";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            connection.Open();
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            List<ViewTestWithTotalTest> viewTestWithTotalTestsList=new List<ViewTestWithTotalTest>();
+           
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    ViewTestWithTotalTest viewTestWithTotalTest=new ViewTestWithTotalTest();
+                    viewTestWithTotalTest.Name = reader["Name"].ToString();
+                    viewTestWithTotalTest.TotalTest = int.Parse(reader["TotalTest"].ToString());
+                    viewTestWithTotalTest.TotalAmount = double.Parse(reader["TotalAmount"].ToString());
+
+                    viewTestWithTotalTestsList.Add(viewTestWithTotalTest);
+                }
+                reader.Close();
+            }
+            connection.Close();
+
+            return viewTestWithTotalTestsList;
+        }
     }
 }

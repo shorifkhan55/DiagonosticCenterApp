@@ -61,15 +61,25 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI
             if (amount != "")
             {
                 string billNo = ViewState["BillNo"].ToString();
-                int rowAffected = billManager.UpdateBillStatus(billNo);
-
-                if (rowAffected > 0)
+                bool isPaid = billManager.IsBillPaid(billNo);
+                if (isPaid == true)
                 {
-                    testTypeSuccessfullAlartLabel.Text = "Bill Successfully paid.";
+                    testTypeSuccessfullAlartLabel.Text = "Bill already Paid.";
 
                     testTypeSuccessfullDiv.Visible = true;
                 }
+                else
+                {
+                    int rowAffected = billManager.UpdateBillStatus(billNo);
 
+                    if (rowAffected > 0)
+                    {
+                        testTypeSuccessfullAlartLabel.Text = "Bill Successfully paid.";
+
+                        testTypeSuccessfullDiv.Visible = true;
+                    }
+                }
+                
 
             }
         }

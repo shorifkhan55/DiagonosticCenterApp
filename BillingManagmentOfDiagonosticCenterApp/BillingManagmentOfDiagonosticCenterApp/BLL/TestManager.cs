@@ -42,6 +42,10 @@ namespace BillingManagmentOfDiagonosticCenterApp.BLL
             return _testGateway.GetTestById(id);
         }
 
+        public List<ViewTestWithTotalTest> GetTestWiseReportByDate(DateTime lowerDate, DateTime upperDateTime)
+        {
+            return _testGateway.GetTestWiseReportByDate(lowerDate, upperDateTime);
+        }
 
     }
 }

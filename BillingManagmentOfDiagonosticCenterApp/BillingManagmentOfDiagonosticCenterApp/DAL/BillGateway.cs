@@ -99,5 +99,19 @@ namespace BillingManagmentOfDiagonosticCenterApp.DAL
             connection.Close();
             return rowAffected;
         }
+
+        public bool IsBillPaid(string billNo)
+        {
+            Bill bill = GetBillByBillNo(billNo);
+
+            if (bill.Status == "unpaid")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

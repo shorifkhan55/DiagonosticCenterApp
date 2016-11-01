@@ -80,7 +80,7 @@
                                             <label >From Date</label>
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="date" id="TextBox1" value=" " runat="server" class="form-control"/>
+                                            <input type="date" id="lowerDateTextBox" value=" " runat="server" class="form-control"/>
                                         </div>
                                         <div class="col-lg-3"> </div>
                                    </div>
@@ -89,15 +89,15 @@
                                             <label >To Date</label>
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="date" id="TextBox2" value=" " runat="server" class="form-control"/>
+                                            <input type="date" id="upperDateTextBox" value=" " runat="server" class="form-control"/>
                                         </div>
                                         <div class="col-lg-3">
-                                            <asp:Button runat="server" ID="Button1" CssClass="btn btn-primary" Text="Show" />
+                                            <asp:Button runat="server" ID="showReportButton" CssClass="btn btn-primary" Text="Show" OnClick="showReportButton_Click" />
                                         </div>
                                    </div>
                                   
                                 
-                                    <div class="col-lg-12">
+                                    <%--<div class="col-lg-12">--%>
                                    <!--Start of GrideView Section Section-->                
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space" id="gridViewControl">
                                         <asp:GridView ID="testShowGridView" runat="server" AutoGenerateColumns="False" 
@@ -106,29 +106,29 @@
                                             <Columns>
                                                 <asp:TemplateField  HeaderText="SL NO">
                                                     <ItemTemplate>
-                                                        <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                                        <asp:Label runat="server"><%#Container.DataItemIndex+1 %></asp:Label>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                                 <asp:TemplateField HeaderText="Test Name">
                                                     <ItemTemplate>
-                                                        <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                                        <asp:Label runat="server"><%#Eval("Name") %></asp:Label>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                                 <asp:TemplateField HeaderText="Total Test">
                                                     <ItemTemplate>
-                                                        <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                                        <asp:Label runat="server"><%#Eval("TotalTest") %></asp:Label>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                                 <asp:TemplateField HeaderText="Total Amount">
                                                     <ItemTemplate>
-                                                        <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                                        <asp:Label runat="server"><%#Eval("TotalAmount") %></asp:Label>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                             </Columns>
                                         </asp:GridView>
                                     </div>
                                     <!--End of GrideView Section Section-->  
-                              </div>
+                              <%--</div>--%>
                              
                                     <div class="col-lg-12 space">
                                 <div class="col-lg-6">
@@ -142,7 +142,7 @@
                                         <label>Total</label>
                                     </div>
                                     <div class="col-lg-8">
-                                        <input type="text" id="Text3" value=" " runat="server" class="form-control"/>
+                                        <input type="text" id="totalTextBox" value=" " runat="server" class="form-control"/>
                                     </div>
                                 </div>
                             </div>
