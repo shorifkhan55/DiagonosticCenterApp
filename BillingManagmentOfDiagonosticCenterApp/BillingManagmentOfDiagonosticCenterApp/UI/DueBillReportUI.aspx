@@ -80,7 +80,7 @@
                                             <label >From Date</label>
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="date" id="TextBox1" value=" " runat="server" class="form-control"/>
+                                            <input type="date" id="lowerDateTextBox" value=" " runat="server" class="form-control"/>
                                         </div>
                                         <div class="col-lg-3"> </div>
                                    </div>
@@ -89,10 +89,10 @@
                                             <label >To Date</label>
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="date" id="TextBox2" value=" " runat="server" class="form-control"/>
+                                            <input type="date" id="upperDateTextBox" value=" " runat="server" class="form-control"/>
                                         </div>
                                         <div class="col-lg-3">
-                                            <asp:Button runat="server" ID="Button1" CssClass="btn btn-primary" Text="Show" />
+                                            <asp:Button runat="server" ID="reportShowButton" CssClass="btn btn-primary" Text="Show" OnClick="reportShowButton_Click" />
                                         </div>
                                    </div>
                                   
@@ -100,33 +100,33 @@
                                     <div class="col-lg-12">
                                    <!--Start of GrideView Section Section-->                
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space" id="gridViewControl">
-                                        <asp:GridView ID="testShowGridView" runat="server" AutoGenerateColumns="False" 
+                                        <asp:GridView ID="billShowGridView" runat="server" AutoGenerateColumns="False" 
                                             CssClass="col-lg-12 col-md-12 col-sm-12 col-xs-12 table table-bordered" HeaderStyle="#CDDAD7;">
                                             <headerstyle backcolor="#337ab7" forecolor="white"/>
                                             <Columns>
                                                 <asp:TemplateField  HeaderText="SL NO">
                                                     <ItemTemplate>
-                                                        <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                                        <asp:Label runat="server"><%#Container.DataItemIndex+1 %></asp:Label>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                                 <asp:TemplateField HeaderText="Bill Number">
                                                     <ItemTemplate>
-                                                        <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                                        <asp:Label runat="server"><%#Eval("BillNo") %></asp:Label>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                                 <asp:TemplateField HeaderText="Contract Number">
                                                     <ItemTemplate>
-                                                        <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                                        <asp:Label runat="server"><%#Eval("ContactNo") %></asp:Label>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                                 <asp:TemplateField HeaderText="Patient Name">
                                                     <ItemTemplate>
-                                                        <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                                        <asp:Label runat="server"><%#Eval("PatientName") %></asp:Label>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                                 <asp:TemplateField HeaderText="Bill Amount">
                                                     <ItemTemplate>
-                                                        <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                                        <asp:Label runat="server"><%#Eval("BillAmount") %></asp:Label>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                             </Columns>
@@ -147,7 +147,7 @@
                                         <label>Total</label>
                                     </div>
                                     <div class="col-lg-8">
-                                        <input type="text" id="Text3" value=" " runat="server" class="form-control"/>
+                                        <input type="text" id="totalAmountTextBox" value=" " runat="server" class="form-control"/>
                                     </div>
                                 </div>
                             </div>

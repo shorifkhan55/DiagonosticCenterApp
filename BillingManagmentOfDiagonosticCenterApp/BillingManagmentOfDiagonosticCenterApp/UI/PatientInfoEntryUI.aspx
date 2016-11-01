@@ -42,9 +42,9 @@
                     <li><a href="TestEntryUI.aspx">Test Entry</a></li>
                     <li class="active"><a href="PatientInfoEntryUI.aspx">Patient Request</a></li>
                     <li><a href="AmountInfoUI.aspx">Payment Info</a></li>
-                    <li><a href="#">Test Wise Report</a></li>
-                    <li><a href="#">Type Wise Report</a></li>
-                    <li><a href="#">Due Bill Info</a></li>
+                    <li><a href="TestWiseReportUI.aspx">Test Wise Report</a></li>
+                    <li><a href="TypeWiseReportUI.aspx">Type Wise Report</a></li>
+                    <li><a href="DueBillReportUI.aspx">Due Bill Info</a></li>
                   </ul>
                 </div>
               </div>
@@ -80,7 +80,7 @@
                                     <label>Name Of the Patient</label>
                                 </div>
                                 <div class="col-lg-7">
-                                    <input type="text" id="Text4" value=" " runat="server" class="form-control"/>
+                                    <input type="text" id="nameTextBox" value=" " runat="server" class="form-control"/>
                                 </div>
                             </div>
                             <div class="col-lg-12 space">
@@ -88,7 +88,7 @@
                                     <label>Date Of Barth</label>
                                 </div>
                                 <div class="col-lg-7">
-                                    <input type="date" name="dateTimeTextBox" class="form-control"/>
+                                    <input type="date" id="dateOfBirthTextBox" class="form-control" runat="server"/>
                                 </div>
                             </div>
                             <div class="col-lg-12 space">
@@ -96,7 +96,7 @@
                                     <label>Mobile Number</label>
                                 </div>
                                 <div class="col-lg-7">
-                                    <input type="text" id="Text2" value=" " runat="server" class="form-control"/>
+                                    <input type="number" id="mobileTextBox" value=" " runat="server" class="form-control"/>
                                 </div>
                             </div>
                             <div class="col-lg-12 space">
@@ -104,7 +104,7 @@
                                     <label>Select Test</label>
                                 </div>
                                 <div class="col-lg-7">
-                                    <asp:DropDownList runat="server" ID="testSelectDropDownList" CssClass="btn btn-default " AutoPostBack="True"/>
+                                    <asp:DropDownList runat="server" ID="testSelectDropDownList" CssClass="btn btn-default " Width="258px" AutoPostBack="True" OnSelectedIndexChanged="testSelectDropDownList_SelectedIndexChanged"/>
                                 </div>
                             </div>
                             <div class=" col-lg-6 col-lg-offset-7 space">
@@ -112,12 +112,12 @@
                                     <label>Fee</label>
                                 </div>
                                 <div class="col-lg-6 ">
-                                    <input type="text" id="Text1" value=" " runat="server" class="form-control"/>
+                                    <input type="text" id="feeTextBox" value=" " runat="server" class="form-control"/>
                                 </div>
                             </div>
                       
                             <div class="col-lg-2 pull-right space">
-                                <asp:Button runat="server" ID="addGridviewButton" CssClass="btn btn-primary" Text="Add"/>
+                                <asp:Button runat="server" ID="addGridviewButton" CssClass="btn btn-primary" Text="Add" OnClick="addGridviewButton_Click" />
                             </div>
                              
                             <!--Start of GrideView Section Section-->                
@@ -128,40 +128,39 @@
                                     <Columns>
                                         <asp:TemplateField  HeaderText="SL NO">
                                             <ItemTemplate>
-                                                <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                                <asp:Label runat="server"><%#Container.DataItemIndex+1 %></asp:Label>
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                         <asp:TemplateField HeaderText="Test">
                                             <ItemTemplate>
-                                                <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                                <asp:Label runat="server"><%#Eval("Name") %></asp:Label>
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                         <asp:TemplateField HeaderText="Fee">
                                             <ItemTemplate>
-                                                <asp:Label runat="server"><!--<%#Eval(" ") %>--></asp:Label>
+                                                <asp:Label runat="server"><%#Eval("Fee") %></asp:Label>
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                     </Columns>
                                 </asp:GridView>
                             </div>
                             <!--End of GrideView Section Section-->   
-                            
-                             <div class=" col-lg-6 col-lg-offset-7 space">
+                            <div class=" col-lg-6 col-lg-offset-7 space">
                                 <div class="col-lg-4">
                                     <label>Total</label>
                                 </div>
                                 <div class="col-lg-6 ">
-                                    <input type="text" id="Text3" value=" " runat="server" class="form-control"/>
+                                    <input type="text" id="totalTextBox" value=" " runat="server" class="form-control"/>
                                 </div>
                             </div>
                              <div class=" col-lg-6 col-lg-offset-7 space">
                                 <div class="col-lg-4"> </div>
                                 <div class="col-lg-6 pull-right">
-                                    <asp:Button runat="server" ID="Button1" CssClass="btn btn-primary" Text="Save"/>
+                                    <asp:Button runat="server" ID="saveButton" CssClass="btn btn-primary" Text="Save" OnClick="saveButton_Click" />
                                 </div>
-                            </div>
                             
-                         </div>
+                            </div>
+                                   </div>
                     </div>
                     
                     <!--Patent Information Section-->

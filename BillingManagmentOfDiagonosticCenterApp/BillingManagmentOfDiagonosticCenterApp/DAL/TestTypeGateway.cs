@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Configuration;
 using BillingManagmentOfDiagonosticCenterApp.Model;
+using BillingManagmentOfDiagonosticCenterApp.Model.ViewModels;
 
 namespace BillingManagmentOfDiagonosticCenterApp.DAL
 {
@@ -31,7 +32,7 @@ namespace BillingManagmentOfDiagonosticCenterApp.DAL
         {
             SqlConnection connection = new SqlConnection(connectionString);
 
-            string query = "SELECT *FROM Types";
+            string query = "SELECT *FROM Types ORDER BY Name";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -74,6 +75,36 @@ namespace BillingManagmentOfDiagonosticCenterApp.DAL
             {
                 return false;
             }
+        }
+
+        public List<ViewTypeWithTotalTest> GetTypeReportByDate(DateTime lowerDate, DateTime upperDate)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            string query = "SELECT Tp.Name,ISNULL(SUM(Te.TotalTest),0) TotalTest,ISNULL(SUM(Te.TotalAmount),0) TotalAmount FROM Types Tp LEFT JOIN (SELECT T.TypeId, COUNT(R.BillNo) TotalTest, T.Fee*COUNT(R.BillNo) AS TotalAmount FROM (SELECT O.TestId,O.BillNo FROM Orders O INNER JOIN Bills B ON O.BillNo=B.BillNo WHERE B.Date>='"+lowerDate+"' AND B.Date<='"+upperDate+"') R INNER JOIN Tests T ON R.TestId=T.Id GROUP BY T.TypeId,T.Fee) Te ON Tp.Id=Te.TypeId GROUP BY Tp.Name";
+            SqlCommand command = new SqlCommand(query, connection);
+
+            connection.Open();
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            List<ViewTypeWithTotalTest> viewTypeWithTotalTestsList = new List<ViewTypeWithTotalTest>();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    ViewTypeWithTotalTest viewTypeWithTotalTest=new ViewTypeWithTotalTest();
+                    viewTypeWithTotalTest.Name = reader["Name"].ToString();
+                    viewTypeWithTotalTest.TotalTest = int.Parse(reader["TotalTest"].ToString());
+                    viewTypeWithTotalTest.TotalAmount = double.Parse(reader["TotalAmount"].ToString());
+
+                    viewTypeWithTotalTestsList.Add(viewTypeWithTotalTest);
+                }
+                reader.Close();
+            }
+            connection.Close();
+
+            return viewTypeWithTotalTestsList;
         }
     }
 }

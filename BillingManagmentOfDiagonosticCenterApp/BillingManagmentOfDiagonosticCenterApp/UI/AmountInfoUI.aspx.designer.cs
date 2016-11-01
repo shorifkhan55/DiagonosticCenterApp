@@ -58,22 +58,22 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI {
         protected global::System.Web.UI.WebControls.Label testTypeSuccessfullAlartLabel;
         
         /// <summary>
-        /// testTypeNameTextBox control.
+        /// billNoTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText testTypeNameTextBox;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl billNoTextBox;
         
         /// <summary>
-        /// Text2 control.
+        /// mobileNoTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl mobileNoTextBox;
         
         /// <summary>
         /// amountSearchButton control.
@@ -85,22 +85,22 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI {
         protected global::System.Web.UI.WebControls.Button amountSearchButton;
         
         /// <summary>
-        /// Text1 control.
+        /// amountTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText amountTextBox;
         
         /// <summary>
-        /// Text3 control.
+        /// dueDateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text3;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText dueDateTextBox;
         
         /// <summary>
         /// dueAmountPayButton control.

@@ -40,9 +40,9 @@
                     <li><a href="TestEntryUI.aspx">Test Entry</a></li>
                     <li><a href="PatientInfoEntryUI.aspx">Patient Request</a></li>
                     <li class="active"><a href="AmountInfoUI.aspx">Payment Info</a></li>
-                    <li><a href="#">Test Wise Report</a></li>
-                    <li><a href="#">Type Wise Report</a></li>
-                    <li><a href="#">Due Bill Info</a></li>
+                    <li><a href="TestWiseReportUI.aspx">Test Wise Report</a></li>
+                    <li><a href="TypeWiseReportUI.aspx">Type Wise Report</a></li>
+                    <li><a href="DueBillReportUI.aspx">Due Bill Info</a></li>
                   </ul>
                 </div>
               </div>
@@ -80,7 +80,7 @@
                                             <label >Bill No</label>
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="text" id="testTypeNameTextBox" value=" " runat="server" class="form-control"/>
+                                            <input type="number" id="billNoTextBox" value=" " runat="server" class="form-control"/>
                                         </div>
                                         <div class="col-lg-3">
                                             <label >Or</label>
@@ -91,10 +91,10 @@
                                             <label >Mobile No</label>
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="text" id="Text2" value=" " runat="server" class="form-control"/>
+                                            <input type="number" id="mobileNoTextBox" value=" " runat="server" class="form-control"/>
                                         </div>
                                         <div class="col-lg-3">
-                                            <asp:Button runat="server" ID="amountSearchButton" CssClass="btn btn-primary" Text="Search" />
+                                            <asp:Button runat="server" ID="amountSearchButton" CssClass="btn btn-primary" Text="Search" OnClick="amountSearchButton_Click" />
                                         </div>
                                    </div>
                               </div>
@@ -107,7 +107,7 @@
                                             <label >Amount</label>
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="text" id="Text1" value=" " runat="server" class="form-control"/>
+                                            <input type="text" id="amountTextBox" value=" " runat="server" class="form-control"/>
                                         </div>
                                         <div class="col-lg-3">
                                             
@@ -118,10 +118,10 @@
                                             <label >Due Date</label>
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="text" id="Text3" value=" " runat="server" class="form-control"/>
+                                            <input type="text" id="dueDateTextBox" value=" " runat="server" class="form-control"/>
                                         </div>
                                         <div class="col-lg-3">
-                                            <asp:Button runat="server" ID="dueAmountPayButton" CssClass="btn btn-primary" Text="Pay" />
+                                            <asp:Button runat="server" ID="dueAmountPayButton" CssClass="btn btn-primary" Text="Pay" OnClick="dueAmountPayButton_Click" />
                                         </div>
                                    </div>
                               </div>
