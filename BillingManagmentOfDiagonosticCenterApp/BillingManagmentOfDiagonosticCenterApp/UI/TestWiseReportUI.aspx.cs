@@ -13,7 +13,6 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void showReportButton_Click(object sender, EventArgs e)
@@ -33,6 +32,12 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI
             }
 
             totalTextBox.Value = totalAmount.ToString();
+        }
+
+        protected void logoutButton_OnClick(object sender, EventArgs e)
+        {
+            Session.Remove("UserName");
+            Response.Redirect("Index.aspx");
         }
     }
 }

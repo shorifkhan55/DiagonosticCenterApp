@@ -22,40 +22,13 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// testTypeDangerDiv control.
+        /// logoutButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl testTypeDangerDiv;
-        
-        /// <summary>
-        /// testTypeDangerAlartLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label testTypeDangerAlartLabel;
-        
-        /// <summary>
-        /// testTypeSuccessfullDiv control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl testTypeSuccessfullDiv;
-        
-        /// <summary>
-        /// testTypeSuccessfullAlartLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label testTypeSuccessfullAlartLabel;
+        protected global::System.Web.UI.WebControls.Button logoutButton;
         
         /// <summary>
         /// lowerDateTextBox control.
@@ -94,13 +67,13 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI {
         protected global::System.Web.UI.WebControls.GridView testShowGridView;
         
         /// <summary>
-        /// Button2 control.
+        /// testRwportPdfButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button testRwportPdfButton;
         
         /// <summary>
         /// totalTextBox control.

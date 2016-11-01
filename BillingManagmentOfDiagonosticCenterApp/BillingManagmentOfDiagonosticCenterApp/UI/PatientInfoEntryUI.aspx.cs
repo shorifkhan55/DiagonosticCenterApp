@@ -16,7 +16,12 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session["UserName"] != null)
+            {
+                successLabel.Text = "Welcome " + Session["UserName"].ToString();
+               
+            }
+
             testTypeDangerDiv.Visible = false;
             testTypeSuccessfullDiv.Visible = false;
             if (!IsPostBack)
@@ -137,6 +142,12 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI
                 testShowGridView.DataSource = testList;
                 testShowGridView.DataBind();
             }
+        }
+
+        protected void logoutButton_Click(object sender, EventArgs e)
+        {
+            Session.Remove("UserName");
+            Response.Redirect("Index.aspx");
         }
     }
 }

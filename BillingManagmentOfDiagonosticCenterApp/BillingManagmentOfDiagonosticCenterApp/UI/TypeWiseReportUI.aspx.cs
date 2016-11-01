@@ -34,5 +34,12 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI
 
             totalAmountTextBox.Value = totalAmount.ToString();
         }
+
+        protected void logoutButton_OnClick(object sender, EventArgs e)
+        {
+            Session.Remove("UserName");
+            Response.Redirect("Index.aspx");
+        }
+
     }
 }
