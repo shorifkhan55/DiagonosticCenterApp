@@ -40,9 +40,9 @@
                     <li><a href="TestEntryUI.aspx">Test Entry</a></li>
                     <li><a href="PatientInfoEntryUI.aspx">Patient Request</a></li>
                     <li><a href="AmountInfoUI.aspx">Payment Info</a></li>
-                    <li><a href="#">Test Wise Report</a></li>
-                    <li><a href="#">Type Wise Report</a></li>
-                    <li><a href="#">Due Bill Info</a></li>
+                    <li><a href="TestWiseReportUI.aspx">Test Wise Report</a></li>
+                    <li><a href="TypeWiseReportUI.aspx">Type Wise Report</a></li>
+                    <li><a href="DueBillReportUI.aspx">Due Bill Info</a></li>
                   </ul>
                 </div>
               </div>
