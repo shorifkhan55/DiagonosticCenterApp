@@ -95,6 +95,7 @@
     <Compile Include="Model\ViewModels\ViewAllTestWithType.cs" />
     <Compile Include="Model\ViewModels\ViewTestWithTotalTest.cs" />
     <Compile Include="Model\ViewModels\ViewTypeWithTotalTest.cs" />
+    <Compile Include="Model\ViewModels\ViewUnpaidBill.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\AmountInfoUI.aspx.cs">
       <DependentUpon>AmountInfoUI.aspx</DependentUpon>

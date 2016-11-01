@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Configuration;
 using BillingManagmentOfDiagonosticCenterApp.Model;
+using BillingManagmentOfDiagonosticCenterApp.Model.ViewModels;
 
 namespace BillingManagmentOfDiagonosticCenterApp.DAL
 {
@@ -112,6 +113,38 @@ namespace BillingManagmentOfDiagonosticCenterApp.DAL
             {
                 return true;
             }
+        }
+
+        public List<ViewUnpaidBill> GetUnpaidBillsByDate(DateTime lowerDate, DateTime upperDate)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            string query = "SELECT Bi.BillNo,P.Mobile,P.Name,Bi.TotalAmount FROM (SELECT DISTINCT B.BillNo, B.TotalAmount,O.PatientId FROM Bills B INNER JOIN Orders O ON B.BillNo=O.BillNo WHERE B.Date>='"+lowerDate+"' AND B.Date<='"+upperDate+"' AND B.Status='unpaid') Bi INNER JOIN Patients P ON Bi.PatientId=P.Id";
+            SqlCommand command = new SqlCommand(query, connection);
+
+            connection.Open();
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            List<ViewUnpaidBill> viewUnpaidBillsList = new List<ViewUnpaidBill>();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    ViewUnpaidBill viewUnpaidBill = new ViewUnpaidBill();
+                    viewUnpaidBill.PatientName = reader["Name"].ToString();
+                    viewUnpaidBill.BillNo = reader["BillNo"].ToString();
+                    viewUnpaidBill.ContactNo = reader["Mobile"].ToString();
+                    viewUnpaidBill.BillAmount = double.Parse(reader["TotalAmount"].ToString());
+
+                    viewUnpaidBillsList.Add(viewUnpaidBill);
+                }
+                reader.Close();
+            }
+            connection.Close();
+
+            return viewUnpaidBillsList;
+
         }
     }
 }

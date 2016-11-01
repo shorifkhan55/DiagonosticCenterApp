@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using BillingManagmentOfDiagonosticCenterApp.DAL;
 using BillingManagmentOfDiagonosticCenterApp.Model;
+using BillingManagmentOfDiagonosticCenterApp.Model.ViewModels;
 
 namespace BillingManagmentOfDiagonosticCenterApp.BLL
 {
@@ -35,6 +36,11 @@ namespace BillingManagmentOfDiagonosticCenterApp.BLL
         public bool IsBillPaid(string billNo)
         {
             return _billGateway.IsBillPaid(billNo);
+        }
+
+        public List<ViewUnpaidBill> GetUnpaidBillsByDate(DateTime lowerDate, DateTime upperDate)
+        {
+            return _billGateway.GetUnpaidBillsByDate(lowerDate, upperDate);
         }
     }
 }
