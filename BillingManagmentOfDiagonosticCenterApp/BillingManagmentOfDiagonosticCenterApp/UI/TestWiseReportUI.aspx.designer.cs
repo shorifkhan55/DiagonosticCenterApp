@@ -67,13 +67,13 @@ namespace BillingManagmentOfDiagonosticCenterApp.UI {
         protected global::System.Web.UI.WebControls.GridView testShowGridView;
         
         /// <summary>
-        /// testRwportPdfButton control.
+        /// pdfButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button testRwportPdfButton;
+        protected global::System.Web.UI.WebControls.Button pdfButton;
         
         /// <summary>
         /// totalTextBox control.

@@ -153,7 +153,7 @@
                                                 <div class="col-lg-6">
                                                     <div class="col-lg-8"></div>
                                                     <div class="col-lg-4">
-                                                        <asp:Button runat="server" ID="testRwportPdfButton" CssClass="btn btn-default" Text="PDF" />
+                                                        <asp:Button runat="server" ID="pdfButton" CssClass="btn btn-default" Text="PDF" OnClick="pdfButton_Click" />
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 pull-right">
