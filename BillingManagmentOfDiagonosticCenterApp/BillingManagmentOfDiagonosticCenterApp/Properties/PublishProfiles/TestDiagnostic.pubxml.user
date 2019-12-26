@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\TestDiagnostic</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/BillingManagmentOfDiagonosticCenterApp.dll">
+      <publishTime>05/01/2017 13:54:09</publishTime>
+    </File>
+    <File Include="bin/BillingManagmentOfDiagonosticCenterApp.pdb">
+      <publishTime>05/01/2017 13:54:08</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>10/07/2016 18:33:44</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-theme.css">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-theme.css.map">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-theme.min.css">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-theme.min.css.map">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap.css">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap.css.map">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap.min.css">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap.min.css.map">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/css/Customize.css">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.js">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.min.js">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/js/Customize.js">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="Bootstrap/js/npm.js">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="UI/AmountInfoUI.aspx">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="UI/DueBillReportUI.aspx">
+      <publishTime>11/02/2016 09:47:48</publishTime>
+    </File>
+    <File Include="UI/Index.aspx">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="UI/PatientInfoEntryUI.aspx">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="UI/TestEntryUI.aspx">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="UI/TestTypeEntryUI.aspx">
+      <publishTime>11/02/2016 06:26:26</publishTime>
+    </File>
+    <File Include="UI/TestWiseReportUI.aspx">
+      <publishTime>11/02/2016 06:55:30</publishTime>
+    </File>
+    <File Include="UI/TypeWiseReportUI.aspx">
+      <publishTime>11/02/2016 06:41:44</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/01/2017 13:54:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

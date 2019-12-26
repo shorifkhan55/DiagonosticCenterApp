@@ -78,7 +78,9 @@
     <Content Include="UI\TestTypeEntryUI.aspx" />
     <Content Include="UI\TestWiseReportUI.aspx" />
     <Content Include="UI\TypeWiseReportUI.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BillManager.cs" />
@@ -171,6 +173,7 @@
     <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\TestDiagnostic.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
